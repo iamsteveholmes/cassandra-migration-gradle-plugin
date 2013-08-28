@@ -1,6 +1,7 @@
 import org.gradle.api.artifacts.maven.MavenDeployment
 
 apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'maven'
 apply plugin: 'scala'
 //apply plugin: 'signing'
@@ -21,7 +22,8 @@ dependencies {
         transitive = true
     }
     compile "com.streamsend:pillar:${pillarVersion}",
-            "com.typesafe:config:${configVersion}"
+            "com.typesafe:config:${configVersion}",
+            "org.codehaus.groovy:groovy:${groovyVersion}"
 }
 
 task scaladocsJar(type: Jar, dependsOn: javadoc) {

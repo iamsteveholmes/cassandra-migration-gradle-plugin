@@ -2,12 +2,11 @@ package com.streamsend.migration
 
 import org.gradle.api.tasks.TaskAction
 
-class CassandraInitializationTask extends CassandraTask {
+class CassandraMigrationTask extends CassandraTask {
 
     @TaskAction
-    def initialize() {
-
+    def migrate() {
         val migrator: Migrator = Migrator(getConfigurationFile, getMigrationDirectory, getMigrationName, getEnvironment, getLogger)
-        migrator.initialize()
+        migrator.migrate()
     }
 }
