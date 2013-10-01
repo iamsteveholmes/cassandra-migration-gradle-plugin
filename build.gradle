@@ -7,6 +7,9 @@ apply plugin: 'scala'
 //apply plugin: 'signing'
 apply plugin: 'idea'
 
+group = 'com.streamsend'
+version = '0.8'
+
 repositories {
     mavenCentral()
     mavenLocal()
